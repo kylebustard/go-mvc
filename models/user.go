@@ -19,5 +19,5 @@ func AddUser(u User) (User, error) {
 	u.ID = nextID
 	nextID++
 	users = append(users, &u)
-	return users, nil
+	return u, nil
 }
