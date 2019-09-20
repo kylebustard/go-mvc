@@ -1,6 +1,9 @@
 package models
 
-import "fmt"
+import (
+	"errors"
+	"fmt"
+)
 
 type User struct {
 	ID        int
@@ -19,7 +22,7 @@ func GetUsers() []*User {
 
 func AddUser(u User) (User, error) {
 	if u.ID != 0 {
-		return User{}, error.New("New User must not include ID or ID must be set to zero.")
+		return User{}, errors.New("New User must not include ID or ID must be set to zero.")
 	}
 
 	u.ID = nextID
