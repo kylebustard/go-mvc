@@ -6,7 +6,7 @@ import (
 	"regexp"
 	"strconv"
 
-	"github.com/kylebustard/lowendcode/models"
+	"github.com/kylebustard/go-mvc/models"
 )
 
 type userController struct {
